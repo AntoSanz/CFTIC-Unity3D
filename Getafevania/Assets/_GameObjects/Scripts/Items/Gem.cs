@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Gem : Item {
     public int points;
+    private bool used = false;
     public override void Kill()
     {
         base.Kill();
@@ -11,8 +12,12 @@ public class Gem : Item {
     }
     public override void DoAction()
     {
-        base.DoAction();
-        GameManager.AddPoints(points);
-        Kill();
+        if (!used)
+        {
+            used = false;
+            base.DoAction();
+            GameManager.AddPoints(points);
+            Kill();
+        }
     }
 }

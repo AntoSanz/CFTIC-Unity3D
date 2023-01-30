@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - UIButton
+  - Enemy
+  - Terrain
+  - UI_Ingame
+  - Lava
+  - GlueObject
+  - FragileBox
+  - Star
   layers:
   - Default
   - TransparentFX
